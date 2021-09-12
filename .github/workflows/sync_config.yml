@@ -4,7 +4,7 @@ on:
 jobs:
   repo-sync:
     env:
-      PAT: ${{ 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 }} #此处PAT需要申请，教程详见：https://www.jianshu.com/p/bb82b3ad1d11,需要repo和workflow权限
+      PAT: ${{ secrets.PAT }} #此处PAT需要申请，教程详见：https://www.jianshu.com/p/bb82b3ad1d11,需要repo和workflow权限
     runs-on: ubuntu-latest
     timeout-minutes: 3
     if: github.event.repository.owner.id == github.event.sender.id
